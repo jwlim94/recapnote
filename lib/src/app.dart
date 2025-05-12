@@ -15,7 +15,7 @@ class App extends ConsumerWidget {
       routerConfig: goRouterState,
       theme: ThemeData(
         fontFamily: Strings.roboto,
-        scaffoldBackgroundColor: AppColors.appBlack,
+        scaffoldBackgroundColor: AppColors.appWhite,
       ),
     );
   }
