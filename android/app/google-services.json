@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "76626943099",
+    "project_id": "recapnote-0511",
+    "storage_bucket": "recapnote-0511.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76626943099:android:3feecfe9a9ce49c8db56de",
+        "android_client_info": {
+          "package_name": "com.example.recapnote"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5P56GHol9MrHBiPcEaPwHm7ml3JkUcSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
