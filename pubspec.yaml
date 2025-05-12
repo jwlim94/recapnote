@@ -17,6 +17,9 @@ dependencies:
   json_annotation: ^4.9.0
   cloud_firestore: ^5.6.7
   speech_to_text: ^7.0.0
+  envied: ^1.1.1
+  dart_openai: ^5.1.0
+  gpt_markdown: ^1.0.18
 
 dev_dependencies:
   flutter_test:
@@ -27,6 +30,7 @@ dev_dependencies:
   json_serializable: ^6.9.5
   build_runner: ^2.4.15
   riverpod_generator: ^2.6.5
+  envied_generator: ^1.1.1
 
 flutter:
   uses-material-design: true
@@ -43,3 +47,4 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/sounds/
