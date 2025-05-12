@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:recapnote/src/features/authentication/data/auth_repository.dart';
+import 'package:recapnote/src/features/note/presentation/history_screen.dart';
+import 'package:recapnote/src/features/note/presentation/note_detail_screen.dart';
 import 'package:recapnote/src/features/note/presentation/note_screen.dart';
 import 'package:recapnote/src/features/user/presentation/profile_screen.dart';
 import 'package:recapnote/src/routing/app_startup.dart';
@@ -43,6 +45,14 @@ GoRouter goRouterState(Ref ref) {
         pageBuilder:
             (context, state) => const NoTransitionPage(child: AppStartup()),
       ),
+      GoRoute(
+        path: Strings.noteDetailPath,
+        name: AppRoute.noteDetail.name,
+        pageBuilder: (context, state) {
+          final noteId = state.pathParameters['id']!;
+          return NoTransitionPage(child: NoteDetailScreen(noteId));
+        },
+      ),
       // Add more routes here...
       StatefulShellRoute.indexedStack(
         parentNavigatorKey: Keys.rootNavigatorKey,
@@ -53,6 +63,18 @@ GoRouter goRouterState(Ref ref) {
               ),
             ),
         branches: [
+          StatefulShellBranch(
+            navigatorKey: Keys.historyNavigatorKey,
+            routes: [
+              GoRoute(
+                path: Strings.historyPath,
+                name: AppRoute.history.name,
+                pageBuilder: (context, state) {
+                  return const NoTransitionPage(child: HistoryScreen());
+                },
+              ),
+            ],
+          ),
           StatefulShellBranch(
             navigatorKey: Keys.homeNavigatorKey,
             routes: [
