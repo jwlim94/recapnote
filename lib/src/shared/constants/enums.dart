@@ -1,1 +1,1 @@
-enum AppRoute { startup, note, profile }
+enum AppRoute { startup, note, profile, history, noteDetail }

@@ -30,24 +30,37 @@ class ScaffoldWithNestedNavigation extends StatelessWidget {
           splashColor: Colors.transparent,
           highlightColor: Colors.transparent,
         ),
-        child: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(
-              icon: const Icon(Icons.note_add_outlined),
-              label: Strings.note,
+        child: Container(
+          decoration: const BoxDecoration(
+            border: Border(
+              top: BorderSide(color: AppColors.appBlack, width: 1),
             ),
-            BottomNavigationBarItem(
-              icon: const Icon(Icons.person_2_outlined),
-              label: Strings.profile,
-            ),
-          ],
-          currentIndex: navigationShell.currentIndex,
-          enableFeedback: false,
-          type: BottomNavigationBarType.fixed,
-          selectedLabelStyle: TextStyles.bodyExtraSmall,
-          unselectedLabelStyle: TextStyles.bodyExtraSmall,
-          selectedItemColor: AppColors.appBlack,
-          onTap: _goBranch,
+          ),
+          child: BottomNavigationBar(
+            items: [
+              BottomNavigationBarItem(
+                icon: const Icon(Icons.history_rounded),
+                label: Strings.history,
+              ),
+              BottomNavigationBarItem(
+                icon: const Icon(Icons.note_add_outlined),
+                label: Strings.note,
+              ),
+              BottomNavigationBarItem(
+                icon: const Icon(Icons.person_2_outlined),
+                label: Strings.profile,
+              ),
+            ],
+            currentIndex: navigationShell.currentIndex,
+            enableFeedback: false,
+            type: BottomNavigationBarType.fixed,
+            selectedLabelStyle: TextStyles.bodyExtraSmall,
+            unselectedLabelStyle: TextStyles.bodyExtraSmall,
+            selectedItemColor: AppColors.appBlue,
+            unselectedItemColor: AppColors.appBlack,
+            backgroundColor: AppColors.appWhite,
+            onTap: _goBranch,
+          ),
         ),
       ),
     );

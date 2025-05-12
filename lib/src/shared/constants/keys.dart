@@ -5,4 +5,5 @@ class Keys {
   static final rootNavigatorKey = GlobalKey<NavigatorState>();
   static final homeNavigatorKey = GlobalKey<NavigatorState>();
   static final profileNavigatorKey = GlobalKey<NavigatorState>();
+  static final historyNavigatorKey = GlobalKey<NavigatorState>();
 }
